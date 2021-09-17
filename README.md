@@ -7,6 +7,7 @@ Then implemented VendingMachine class initialized Items and added each item also
 Finally to get started created Main app with some conditionals.
 
 To run Vending Machine
-1) Expand the VendingMachine,src,java.
-2) To run the main method of Main class  according to your IDE.
+1)Clone the repository 
+2) Expand the VendingMachine,src,java.
+3) To run the main method of Main class  according to your IDE.
 
