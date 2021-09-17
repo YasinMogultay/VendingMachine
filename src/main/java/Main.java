@@ -3,6 +3,7 @@ import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.util.Scanner;
 
+//My main method that runs the app
 public class Main {
     public static void main(String args[]) throws IOException, ParseException {
 
@@ -14,17 +15,16 @@ public class Main {
         System.out.println("Welcome to Vending Machine");
         System.out.println("*********************************************");
 
-        vm.displayInventory();
-
+        vm.displayInventory();//displaying inventory
 
 
         String rsp;
-        System.out.println("Type 'yes' to see order directions");
+        System.out.println("Type 'YES' to see order directions!");
         rsp = in.nextLine();
 
-        if (rsp.equalsIgnoreCase("yes")){
+        if (rsp.equalsIgnoreCase("yes")) {
             for (int i = 0; i < vmItems.length; i++) {
-                System.out.println("Enter " + (i+1) + " for " + vmItems[i].getName());
+                System.out.println("Enter " + (i + 1) + " for " + vmItems[i].getName());
             }
         }
 
@@ -35,16 +35,14 @@ public class Main {
             System.out.print("Enter your choice: ");
             choice = in.nextInt();
 
-            if (choice < 1 || choice > 9) {
+            if (choice < 1 || choice > 10) {
                 System.out.println("Incorrect choice");
-            }
-            else if(choice == 10) {
+            } else if (choice == 10) {
                 System.out.println("Stopping Vending Machine...");
+            } else {
+                vm.dispenseItem(choice - 1); //to get correct index of array
             }
-            else {
-                vm.dispenseItem(choice - 1);
-            }
-        } while(choice != 10);
+        } while (choice != 10);
 
     }
 }

@@ -1,3 +1,4 @@
+//My Item class that instantiate required properties constructor and getters
 public class Item {
 
     private String name;
