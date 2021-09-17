@@ -11,3 +11,7 @@ To run Vending Machine
 2) Expand the VendingMachine,src,java.
 3) To run the main method of Main class  according to your IDE.
 
+To test Vending Machine
+2) Expand the VendingMachine,src,test,VendingMachineTest.
+3) Run test cases according to your IDE.
+
