@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 //My Vending Machine implementation
@@ -5,6 +6,10 @@ public class VendingMachine implements VendingMachineImplementation {
 
     //initialize Item class
     private Item[] items;
+
+    //number formatter
+    private static DecimalFormat df2 = new DecimalFormat("#.##");
+
 
     public VendingMachine() {
         items = new Item[9];
@@ -50,7 +55,7 @@ public class VendingMachine implements VendingMachineImplementation {
                 System.out.println("Dispensing one " + items[itemCode].getName());
                 double changeAmt = amt - items[itemCode].getPrice();// calculating change
                 if (changeAmt > 0)
-                    System.out.println("Here is your change amount of " + changeAmt);
+                System.out.println("Here is your change amount of " + df2.format(changeAmt));
                 items[itemCode].reduceAmount(); //reducing inventory
             }
         }
